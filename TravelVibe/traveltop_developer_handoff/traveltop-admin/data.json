@@ -1,0 +1,79 @@
+{
+  "splash": {
+    "imageUrl": "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+    "tagline": "Local guides, real experiences"
+  },
+  "categories": [
+    { "id": "all", "emoji": "🏔️", "label": "All" },
+    { "id": "beach", "emoji": "🏖️", "label": "Beach" },
+    { "id": "hills", "emoji": "⛰️", "label": "Hills" },
+    { "id": "honeymoon", "emoji": "💑", "label": "Honeymoon" }
+  ],
+  "destinations": [
+    {
+      "id": "d1",
+      "name": "Munnar",
+      "location": "Kerala",
+      "agentCount": 12,
+      "category": "hills",
+      "imageUrl": "https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&w=400&q=80",
+      "color": "#6B8F71"
+    },
+    {
+      "id": "d2",
+      "name": "Ladakh",
+      "location": "J&K",
+      "agentCount": 8,
+      "category": "all",
+      "imageUrl": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=400&q=80",
+      "color": "#4A7FA5"
+    },
+    {
+      "id": "d3",
+      "name": "Goa",
+      "location": "Goa",
+      "agentCount": 15,
+      "category": "beach",
+      "imageUrl": "https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=400&q=80",
+      "color": "#D4A853"
+    },
+    {
+      "id": "d4",
+      "name": "Coorg",
+      "location": "Karnataka",
+      "agentCount": 6,
+      "category": "hills",
+      "imageUrl": "https://images.unsplash.com/photo-1585016495481-91613f9f5e37?auto=format&fit=crop&w=400&q=80",
+      "color": "#5C8A4E"
+    }
+  ],
+  "agents": [
+    {
+      "id": "a1",
+      "name": "Priya Sharma",
+      "specialty": "Family friendly",
+      "location": "Munnar",
+      "rating": 4.9,
+      "pricePerDay": 2500,
+      "color": "#6B8F71"
+    },
+    {
+      "id": "a2",
+      "name": "Rahul Verma",
+      "specialty": "Adventure",
+      "location": "Ladakh",
+      "rating": 4.7,
+      "pricePerDay": 1800,
+      "color": "#4A7FA5"
+    },
+    {
+      "id": "a3",
+      "name": "Anjali Nair",
+      "specialty": "Beach & Water",
+      "location": "Goa",
+      "rating": 4.8,
+      "pricePerDay": 2200,
+      "color": "#D4A853"
+    }
+  ]
+}

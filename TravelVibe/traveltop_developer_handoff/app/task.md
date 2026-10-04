@@ -1,0 +1,22 @@
+# Task Checklist - TravelTop Fixes & Enhancements
+
+- [x] **Database Schema Updates**: Update `admin_schema.sql` with `emergency_contact`, `display_order`, `place_images` table & storage bucket policies
+- [x] **Component 1: Fix Edit Profile Save (Flutter App)**
+  - [x] Implement validation (Name non-empty, Email regex, Phone format)
+  - [x] Connect `_saveProfile()` to Supabase `profiles` table update (including `emergency_contact` & `photo_url`)
+  - [x] Show success checkmark animation / SnackBar & navigate back
+  - [x] Update `settings_screen.dart` to re-fetch/reflect updated profile immediately
+- [x] **Component 2: Fix Dark Theme System & Text Legibility (Flutter App)**
+  - [x] Ensure `AppTheme.lightTheme` & `darkTheme` have proper contrast tokens
+  - [x] Update `settings_screen.dart` section headers ("App Preferences", "Account & Security") to use dynamic theme-aware text color instead of hardcoded white
+  - [x] Audit and fix any other hardcoded colors across `settings_screen.dart` & `edit_traveller_profile_screen.dart`
+- [x] **Component 3: Destination & Place Image Uploads (Admin Portal - React)**
+  - [x] Update `DestinationsPage.tsx` with file upload widget, Supabase Storage (`destination-images`), progress indicator & thumbnail preview
+  - [x] Update `PlacesPage.tsx` with single image file upload & multi-image gallery uploader (`place_images`)
+- [x] **Component 4: "Places to Visit" Instagram Story Viewer (Flutter App)**
+  - [x] Create `lib/widgets/place_story_viewer.dart` with auto-advance progress bars, left/right tap, long-press pause, swipe down close, and place info chips
+  - [x] Update `destination_detail_screen.dart` "Places to Visit" section to horizontal story avatar rings
+  - [x] Support multi-image cycling per place from `place_images` table
+- [x] **Verification & Build Check**
+  - [x] Run `flutter analyze` on `horizon_travel` (0 errors)
+  - [x] Run `npm run build` on `traveltop-admin` (0 errors)

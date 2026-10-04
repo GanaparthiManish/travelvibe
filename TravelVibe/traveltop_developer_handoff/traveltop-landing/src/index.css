@@ -1,0 +1,288 @@
+/* ─── TravelTop Pro Design System (Airbnb-Inspired) ─── */
+:root {
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-ink: #222222;
+  --color-ink-soft: #666666;
+  --color-ink-muted: #888888;
+  --color-accent: #E8483A;
+  --color-accent-hover: #D63B2D;
+  --color-accent-light: #FEECEB;
+  --color-line: #EBEBEB;
+  --color-paper: #FAFAFA;
+  --color-white: #FFFFFF;
+  --color-green: #1E8E5A;
+  --color-green-light: #E7F7EF;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.10);
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 800;
+  color: var(--color-ink);
+  letter-spacing: -0.025em;
+}
+
+p {
+  color: var(--color-ink-soft);
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 14px rgba(232, 72, 58, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 72, 58, 0.35);
+}
+
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+.btn-outline {
+  background-color: var(--color-white);
+  color: var(--color-ink);
+  border-color: var(--color-line);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-ink);
+  background-color: var(--color-paper);
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: scale(0.97);
+}
+
+.btn-dark {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+  border-color: var(--color-ink);
+}
+
+.btn-dark:hover {
+  background-color: #333333;
+  transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Ken Burns Slow Zoom Animation */
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.ken-burns {
+  animation: kenburns 25s ease-in-out infinite alternate;
+}
+
+/* Gentle Bounce Animation */
+@keyframes subtleBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.animate-bounce {
+  animation: subtleBounce 2s ease-in-out infinite;
+}
+
+/* Floating Vertical Bob Animation */
+@keyframes floatBob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: floatBob 5s ease-in-out infinite;
+}
+
+/* Section Header Badges */
+.badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Scroll Fade In Utility */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Mobile Responsiveness Utility Rules ────────────────────────── */
+.mobile-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.mobile-nav-menu {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .desktop-cta {
+    display: none !important;
+  }
+  .mobile-nav-toggle {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--color-line);
+    padding: 20px 24px;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  .mobile-nav-menu a {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-ink);
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px !important;
+  }
+  
+  /* Hero search box & grids */
+  .hero-search-container {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 16px !important;
+    gap: 12px !important;
+  }
+  
+  .hero-search-item {
+    width: 100% !important;
+    border-right: none !important;
+    border-bottom: 1px solid #EBEBEB !important;
+    padding: 8px 0 !important;
+  }
+
+  .grid-responsive {
+    grid-template-columns: 1fr !important;
+  }
+
+  .trust-metrics {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  h1 {
+    font-size: 34px !important;
+  }
+  h2 {
+    font-size: 26px !important;
+  }
+}
+

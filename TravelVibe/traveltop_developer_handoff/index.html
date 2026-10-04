@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelVibe – Local guides, real experiences</title>
+  <meta name="description" content="TravelVibe: Discover local guides and real travel experiences across India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg">
+
+    <!-- SPLASH -->
+    <div class="screen active" id="screen-splash">
+      <div class="screen-label">SPLASH</div>
+      <div class="device-frame">
+        <div class="device-inner splash-bg">
+          <div class="splash-content">
+            <div class="splash-logo">
+              <div class="logo-icon">
+                <svg width="36" height="46" viewBox="0 0 36 46" fill="none">
+                  <polygon points="18,3 27,19 18,35 9,19" fill="#F97316"/>
+                  <polygon points="18,12 23,21 18,30 13,21" fill="#6366F1" opacity="0.55"/>
+                </svg>
+              </div>
+            </div>
+            <h1 class="splash-title"><span style="color:#F97316">Travel</span><span style="color:#6366F1; font-style:italic">Vibe</span></h1>
+            <p class="splash-sub">Local guides, real experiences</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="screen" id="screen-login">
+      <div class="screen-label">LOGIN</div>
+      <div class="device-frame">
+        <div class="device-inner">
+          <div class="login-hero"></div>
+          <div class="login-card">
+            <h2 class="login-title">Welcome back</h2>
+            <p class="login-sub">Log in to continue planning your next trip</p>
+            <div class="form-group">
+              <label class="form-label">EMAIL OR PHONE</label>
+              <input id="login-email" class="form-input" type="text" placeholder="you@example.com" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">PASSWORD</label>
+              <input id="login-pass" class="form-input" type="password" placeholder="••••••••" />
+            </div>
+            <div class="forgot-row">
+              <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+            <button id="btn-login" class="btn-primary" onclick="goToHome()">Log in</button>
+            <div class="or-divider"><span>OR</span></div>
+            <div class="social-row">
+              <button class="btn-social" id="btn-google">
+                <svg width="17" height="17" viewBox="0 0 18 18" fill="none"><path d="M17.64 9.2c0-.637-.057-1.251-.164-1.84H9v3.481h4.844a4.14 4.14 0 01-1.796 2.716v2.259h2.908c1.702-1.567 2.684-3.875 2.684-6.615z" fill="#4285F4"/><path d="M9 18c2.43 0 4.467-.806 5.956-2.18l-2.908-2.259c-.806.54-1.837.86-3.048.86-2.344 0-4.328-1.584-5.036-3.711H.957v2.332A8.997 8.997 0 009 18z" fill="#34A853"/><path d="M3.964 10.71A5.41 5.41 0 013.682 9c0-.593.102-1.17.282-1.71V4.958H.957A8.996 8.996 0 000 9c0 1.452.348 2.827.957 4.042l3.007-2.332z" fill="#FBBC05"/><path d="M9 3.58c1.321 0 2.508.454 3.44 1.345l2.582-2.58C13.463.891 11.426 0 9 0A8.997 8.997 0 00.957 4.958L3.964 6.29C4.672 4.163 6.656 3.58 9 3.58z" fill="#EA4335"/></svg>
+                Google
+              </button>
+              <button class="btn-social" id="btn-apple">
+                <svg width="17" height="17" viewBox="0 0 22 22" fill="none"><path d="M15.4 11.5c.02-2.04 1.68-3.03 1.75-3.08-.96-1.4-2.44-1.59-2.97-1.61-1.26-.12-2.47.74-3.1.74-.63 0-1.62-.73-2.67-.71-1.37.02-2.64.8-3.35 2.02-1.43 2.48-.37 6.16 1.03 8.17.68.99 1.49 2.09 2.55 2.05 1.03-.04 1.41-.66 2.65-.66 1.23 0 1.58.66 2.65.64 1.1-.02 1.81-1 2.48-1.99.78-1.14 1.1-2.24 1.12-2.3-.02-.01-2.16-.83-2.14-3.27zM13.52 5.4c.56-.68.94-1.64.84-2.59-.81.03-1.79.54-2.36 1.22-.51.6-.97 1.56-.84 2.49.89.07 1.8-.45 2.36-1.12z" fill="#1D1D1F"/></svg>
+                Apple
+              </button>
+            </div>
+            <p class="signup-text">New to TravelTop? <a href="#" class="signup-link">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME -->
+    <div class="screen" id="screen-home">
+      <div class="screen-label">TRAVELLER HOME</div>
+      <div class="device-frame">
+        <div class="device-inner home-bg">
+          <div class="home-header">
+            <div>
+              <p class="greeting-small">Good morning</p>
+              <h2 class="greeting-name">Alex</h2>
+            </div>
+            <div class="avatar-circle">A</div>
+          </div>
+          <div class="search-bar">
+            <span class="search-icon">🔍</span>
+            <input id="home-search" class="search-input" type="text" placeholder="Where to next?" />
+          </div>
+          <div class="category-row">
+            <div class="category-item active" onclick="setActive(this)">
+              <div class="cat-icon">🏔️</div>
+              <span>All</span>
+            </div>
+            <div class="category-item" onclick="setActive(this)">
+              <div class="cat-icon">🏖️</div>
+              <span>Beach</span>
+            </div>
+            <div class="category-item" onclick="setActive(this)">
+              <div class="cat-icon">⛰️</div>
+              <span>Hills</span>
+            </div>
+            <div class="category-item" onclick="setActive(this)">
+              <div class="cat-icon">💑</div>
+              <span>Honeym</span>
+            </div>
+          </div>
+          <div class="home-scroll">
+            <div class="section-header">
+              <span class="section-title">Featured destinations</span>
+              <a href="#" class="see-all">See all</a>
+            </div>
+            <div class="dest-row">
+              <div class="dest-card">
+                <div class="dest-img munnar-img"></div>
+                <p class="dest-name">Munnar</p>
+                <p class="dest-meta">Kerala · 12 agents</p>
+              </div>
+              <div class="dest-card">
+                <div class="dest-img ladakh-img"></div>
+                <p class="dest-name">Ladakh</p>
+                <p class="dest-meta">J&amp;K · 8 agents</p>
+              </div>
+            </div>
+            <div class="section-header">
+              <span class="section-title">Top rated agents</span>
+              <a href="#" class="see-all">See all</a>
+            </div>
+            <div class="agent-card">
+              <div class="agent-avatar priya-avatar"></div>
+              <div class="agent-info">
+                <p class="agent-name">Priya Sharma</p>
+                <p class="agent-meta">Munnar · Family friendly</p>
+              </div>
+              <div class="agent-rating">
+                <p class="rating">★ 4.9</p>
+                <p class="price">₹2,500/day</p>
+              </div>
+            </div>
+            <div class="agent-card">
+              <div class="agent-avatar ravi-avatar"></div>
+              <div class="agent-info">
+                <p class="agent-name">Ravi Kumar</p>
+                <p class="agent-meta">Ladakh · Adventure</p>
+              </div>
+              <div class="agent-rating">
+                <p class="rating">★ 4.7</p>
+                <p class="price">₹3,200/day</p>
+              </div>
+            </div>
+            <div class="agent-card">
+              <div class="agent-avatar sara-avatar"></div>
+              <div class="agent-info">
+                <p class="agent-name">Sara Thomas</p>
+                <p class="agent-meta">Goa · Beach expert</p>
+              </div>
+              <div class="agent-rating">
+                <p class="rating">★ 4.8</p>
+                <p class="price">₹1,800/day</p>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-nav">
+            <button class="nav-btn active" id="nav-home">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12L12 4l9 8v8a1 1 0 01-1 1h-5v-5H9v5H4a1 1 0 01-1-1v-8z" fill="#D94040"/></svg>
+            </button>
+            <button class="nav-btn" id="nav-explore">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="#BDBDBD" stroke-width="2"/><path d="M16.5 16.5L21 21" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <button class="nav-btn" id="nav-saved">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 3h14a1 1 0 011 1v17l-7-3-7 3V4a1 1 0 011-1z" stroke="#BDBDBD" stroke-width="2"/></svg>
+            </button>
+            <button class="nav-btn" id="nav-profile">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="4" stroke="#BDBDBD" stroke-width="2"/><path d="M4 20c0-4 3.582-7 8-7s8 3 8 7" stroke="#BDBDBD" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen Switcher Pills -->
+    <div class="screen-nav">
+      <button class="pill active" onclick="switchScreen('splash', this)">Splash</button>
+      <button class="pill" onclick="switchScreen('login', this)">Login</button>
+      <button class="pill" onclick="switchScreen('home', this)">Home</button>
+    </div>
+
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
